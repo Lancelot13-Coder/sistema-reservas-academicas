@@ -1,0 +1,3 @@
+Paquete del sistema de reservas académicas.
+Incluye código Django, pruebas automatizadas, migración inicial, documentación y artefactos OpenSpec.
+Las pruebas deben ejecutarse en un entorno con dependencias instaladas; no se afirman como ejecutadas en el entorno de generación.

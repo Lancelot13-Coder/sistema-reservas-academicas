@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Reservas académicas{% endblock %}</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#1f2937;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}header{background:#17365d;color:white;padding:1rem 5vw;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}header a{color:white;text-decoration:none;margin-right:.8rem}main{max-width:1100px;margin:2rem auto;padding:0 1rem}.card{background:white;border-radius:14px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 3px 14px #10204012}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}.btn,button{display:inline-block;border:0;border-radius:8px;padding:.65rem 1rem;background:#1d5fa7;color:white;text-decoration:none;cursor:pointer;font:inherit}.btn.secondary{background:#526579}.btn.danger,button.danger{background:#a83232}label{display:block;font-weight:600;margin:.8rem 0 .3rem}input,select,textarea{width:100%;padding:.7rem;border:1px solid #cbd5e1;border-radius:7px;font:inherit}form p{margin:.5rem 0}table{width:100%;border-collapse:collapse;background:white}th,td{text-align:left;padding:.8rem;border-bottom:1px solid #e5e7eb}th{background:#eaf0f8}.message{padding:.8rem 1rem;border-radius:8px;background:#e6f4ea;margin:.7rem 0}.errorlist{color:#a83232}.muted{color:#64748b}.pill{padding:.2rem .55rem;border-radius:999px;background:#e5edf7;font-size:.85rem}footer{text-align:center;padding:2rem;color:#64748b}@media(max-width:600px){th,td{padding:.5rem;font-size:.9rem}}
+  </style>
+</head>
+<body>
+<header><strong>Reservas Académicas</strong><nav>{% if user.is_authenticated %}<a href="{% url 'inicio' %}">Inicio</a><a href="{% url 'espacios' %}">Espacios</a><a href="{% url 'reservas' %}">Reservas</a><a href="{% url 'crear_reserva' %}">Solicitar reserva</a><form method="post" action="{% url 'logout' %}" style="display:inline">{% csrf_token %}<button class="secondary" type="submit">Cerrar sesión</button></form>{% else %}<a href="{% url 'login' %}">Iniciar sesión</a>{% endif %}</nav></header>
+<main>{% if messages %}{% for message in messages %}<div class="message">{{ message }}</div>{% endfor %}{% endif %}{% block content %}{% endblock %}</main>
+<footer>Sistema académico de gestión de espacios · Proyecto educativo</footer>
+</body></html>

@@ -1,18 +1,11 @@
 schema: spec-driven
 
 context: |
-  El proyecto es un sistema web de reservas de espacios académicos.
-  Los artefactos de OpenSpec deben redactarse en español.
-  El sistema debe permitir gestionar usuarios, espacios académicos,
-  disponibilidad, reservas, aprobaciones, rechazos, cancelaciones e historial.
-  Debe impedir reservas que se superpongan para un mismo espacio.
-  La arquitectura prevista es Django con Python, plantillas HTML,
-  CSS y SQLite para el desarrollo inicial.
-  El proyecto debe mantener una estructura modular y pruebas automatizadas.
-  Se debe respetar el alcance definido en PLAN_INGENIERIA.md.
-  No se debe implementar código hasta que la propuesta, las especificaciones,
-  el diseño y las tareas hayan sido generados y revisados.
-  El límite de cuatro horas consecutivas se incorporará como un cambio formal
-  posterior a la implementación inicial, actualizando primero las especificaciones
-  y después el código y las pruebas.
-
+  Proyecto académico: sistema web de reservas de espacios académicos.
+  Todos los artefactos deben redactarse en español.
+  Tecnología: Django/Python, plantillas HTML/CSS y SQLite para desarrollo local.
+  El sistema gestiona usuarios, espacios, disponibilidad, reservas, revisión, cancelación e historial.
+  Debe impedir reservas solapadas para el mismo espacio.
+  El límite máximo de cuatro horas se gestiona como cambio formal posterior a la implementación inicial.
+  No implementar cambios nuevos hasta revisar propuesta, especificaciones, diseño y tareas.
+  La documentación principal del proyecto es PLAN_INGENIERIA.md.
